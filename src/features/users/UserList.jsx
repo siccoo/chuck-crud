@@ -1,3 +1,5 @@
+import Button from "../../components/Button";
+
 const UserList = () => {
   const users = [
     { id: "1", name: "Obinna", email: "obinna@mail.com" },
@@ -51,6 +53,7 @@ const UserList = () => {
     ));
   return (
     <div>
+      <Button>Add User</Button>
       <div className="grid gap-5 md:grid-cols-2">
         {users.length ? (
           renderCard()
