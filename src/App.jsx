@@ -1,9 +1,11 @@
+import UserList from "./components/features/users/UserList";
+
 function App() {
   return (
     <>
-      <h1 className="text-2xl text-blue-500">Soft Solutions Crud App</h1>
+      <UserList />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
