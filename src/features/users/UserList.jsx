@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 
 const UserList = () => {
@@ -18,6 +19,7 @@ const UserList = () => {
             <span className="font-normal text-gray-600">{user.email}</span>
           </div>
           <div className="flex gap-4">
+            <Link to={`edit-user/${user.id}`}>
             <button>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -34,6 +36,8 @@ const UserList = () => {
                 />
               </svg>
             </button>
+            </Link>
+            
             <button>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +60,9 @@ const UserList = () => {
     ));
   return (
     <div>
-      <Button>Add User</Button>
+      <Link to="add-user">
+        <Button>Add User</Button>
+      </Link>
       <div className="grid gap-5 md:grid-cols-2">
         {users.length ? (
           renderCard()
